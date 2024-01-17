@@ -12,7 +12,11 @@ const Index = ({pokemon}) => {
     <h1>See All The Pokemon!</h1>
     <ul>
         {pokemon.map((item,i)=>(
-          <li key={i}>{item.name.charAt(0).toUpperCase()+item.name.substring(1)}</li>  
+          <li key={i}>
+               <a href={`/pokemon/${i}`}>
+            {item.name.charAt(0).toUpperCase()+item.name.substring(1)}
+            </a>
+            </li>  
         ))}
     </ul>
     </div>
